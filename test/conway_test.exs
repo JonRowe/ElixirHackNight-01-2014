@@ -1,3 +1,5 @@
+Code.load_file("lib/conway.exs")
+
 defmodule ConwayTest do
   use ExUnit.Case
 
