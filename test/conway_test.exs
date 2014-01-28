@@ -35,4 +35,20 @@ defmodule ConwayTest do
                              [false, false, false]
                             ]
   end
+
+  test "A block is stable" do
+    new_board = Conway.run [
+                             [false, false, false, false],
+                             [false,  true,  true, false],
+                             [false,  true,  true, false],
+                             [false, false, false, false]
+                           ]
+    assert new_board ==    [
+                             [false, false, false, false],
+                             [false,  true,  true, false],
+                             [false,  true,  true, false],
+                             [false, false, false, false]
+                            ]
+  end
+
 end
