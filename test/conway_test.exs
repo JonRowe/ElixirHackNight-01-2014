@@ -87,6 +87,23 @@ defmodule ConwayTest do
                             ]
   end
 
+  test "A boat is stable" do
+    new_board = Conway.run [
+                             [false, false, false, false, false],
+                             [false,  true,  true, false, false],
+                             [false,  true, false,  true, false],
+                             [false, false,  true, false, false],
+                             [false, false, false, false, false],
+                           ]
+    assert new_board ==    [
+                             [false, false, false, false, false],
+                             [false,  true,  true, false, false],
+                             [false,  true, false,  true, false],
+                             [false, false,  true, false, false],
+                             [false, false, false, false, false],
+                            ]
+  end
+
   test "blinker" do
     states = [
                [
