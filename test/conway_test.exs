@@ -51,4 +51,40 @@ defmodule ConwayTest do
                             ]
   end
 
+  test "A Beehive is stable" do
+    new_board = Conway.run [
+                             [false, false, false, false, false, false],
+                             [false, false,  true,  true, false, false],
+                             [false,  true, false, false,  true, false],
+                             [false, false,  true,  true, false, false],
+                             [false, false, false, false, false, false],
+                           ]
+    assert new_board ==    [
+                             [false, false, false, false, false, false],
+                             [false, false,  true,  true, false, false],
+                             [false,  true, false, false,  true, false],
+                             [false, false,  true,  true, false, false],
+                             [false, false, false, false, false, false],
+                            ]
+  end
+
+  test "A loaf is stable" do
+    new_board = Conway.run [
+                             [false, false, false, false, false, false],
+                             [false, false,  true,  true, false, false],
+                             [false,  true, false, false,  true, false],
+                             [false, false,  true, false,  true, false],
+                             [false, false, false,  true, false, false],
+                             [false, false, false, false, false, false],
+                           ]
+    assert new_board ==    [
+                             [false, false, false, false, false, false],
+                             [false, false,  true,  true, false, false],
+                             [false,  true, false, false,  true, false],
+                             [false, false,  true, false,  true, false],
+                             [false, false, false,  true, false, false],
+                             [false, false, false, false, false, false],
+                            ]
+  end
+
 end
